@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  # Neon Local proxy for development
+  neon-local:
+    image: neondatabase/neon_local:latest
+    container_name: acquisitions-neon-local
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env.development
+    healthcheck:
+      test: ["CMD", "pg_isready", "-h", "localhost", "-p", "5432"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - acquisitions-network
+
+  # Application service
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: acquisitions-app-dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env.development
+    environment:
+      # Override DATABASE_URL to use the neon-local service
+      DATABASE_URL: postgres://neon:npg@neon-local:5432/neondb?sslmode=require
+      NODE_ENV: development
+    depends_on:
+      neon-local:
+        condition: service_healthy
+    volumes:
+      # Mount source code for development (optional, for hot reload)
+      - ./src:/app/src:ro
+      - ./drizzle.config.js:/app/drizzle.config.js:ro
+    networks:
+      - acquisitions-network
+    restart: unless-stopped
+
+networks:
+  acquisitions-network:
+    driver: bridge

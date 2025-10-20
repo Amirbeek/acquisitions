@@ -28,3 +28,14 @@
 {"level":"info","message":"User contact3@jsmaster.com successfully created!","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.290Z"}
 {"level":"info","message":"Sign up successfully: contact3@jsmaster.com","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.296Z"}
 {"level":"info","message":"::1 - - [20/Oct/2025:15:46:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 113 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.300Z"}
+{"level":"info","message":"Hello","service":"acquisitions-api","timestamp":"2025-10-20T17:15:49.314Z"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:15:49 +0000] \"GET / HTTP/1.1\" 200 22 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:15:49.320Z"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:15:49 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:15:49.580Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","service":"acquisitions-api","timestamp":"2025-10-20T17:16:27.676Z","userAgent":"PostmanRuntime/7.49.0"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:16:27 +0000] \"GET /health HTTP/1.1\" 403 69 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:16:27.680Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","service":"acquisitions-api","timestamp":"2025-10-20T17:16:28.164Z","userAgent":"PostmanRuntime/7.49.0"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:16:28 +0000] \"GET /health HTTP/1.1\" 403 69 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:16:28.165Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","service":"acquisitions-api","timestamp":"2025-10-20T17:16:28.805Z","userAgent":"PostmanRuntime/7.49.0"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:16:28 +0000] \"GET /health HTTP/1.1\" 403 69 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:16:28.807Z"}
+{"ip":"::1","level":"warn","message":"Bot request blocked","service":"acquisitions-api","timestamp":"2025-10-20T17:16:29.231Z","userAgent":"PostmanRuntime/7.49.0"}
+{"level":"info","message":"::1 - - [20/Oct/2025:17:16:29 +0000] \"GET /health HTTP/1.1\" 403 69 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T17:16:29.232Z"}

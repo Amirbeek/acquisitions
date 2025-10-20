@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import authRoutes from '#routes/auth.routes.js';
+import securityMiddleware from '#middleware/middleware.js';
 const app = express();
 
 // For Security
@@ -25,6 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // APIs
+app.use(securityMiddleware)
 app.use('/api/auth', authRoutes);
 
 app.get('/health', (req, res) => {

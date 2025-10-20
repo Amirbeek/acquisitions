@@ -23,7 +23,9 @@
     "format:check": "prettier --check .",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "dev:docker": "sh ./scripts/dev.sh",
+    "prod:docker": "sh ./scripts/prod.sh"
   },
   "drizzle-kit": {
     "schema": "./src/schema/index.js",
@@ -42,6 +44,8 @@
   "homepage": "https://github.com/Amirbeek/acquisitions#readme",
   "description": "",
   "dependencies": {
+    "@arcjet/inspect": "^1.0.0-beta.13",
+    "@arcjet/node": "^1.0.0-beta.13",
     "@neondatabase/serverless": "^1.0.2",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
