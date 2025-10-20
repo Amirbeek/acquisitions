@@ -1,6 +1,5 @@
 node_modules
-.gitignore
-.env
-
-drizzle/migrations
-drizzle
+.env.*
+.neon_local/
+public/readme/module-icon.webp
+public/readme/module-thumbnail.webp

@@ -1,59 +1,43 @@
 import logger from '#config/logger.js';
 import bcrypt from 'bcrypt';
-import { db } from '#config/db.js';
-import { users } from '#models/user.model.js';
 import { eq } from 'drizzle-orm';
+import { db } from '#config/database.js';
+import { users } from '#models/user.model.js';
 
 export const hashPassword = async password => {
   try {
-    if (typeof password !== 'string' || password.length === 0) {
-      throw new Error('Password must be a non-empty string');
-    }
-
-    const saltRounds = 10;
-    return await bcrypt.hash(password, saltRounds);
-  } catch (err) {
-    logger.error('Error hashing password:', err);
-    throw new Error('Failed to hash password');
+    return await bcrypt.hash(password, 10);
+  } catch (e) {
+    logger.error(`Error hashing the password: ${e}`);
+    throw new Error('Error hashing');
   }
 };
 
 export const comparePassword = async (password, hashedPassword) => {
   try {
-    if (typeof password !== 'string' || password.length === 0) {
-      throw new Error('Password must be a non-empty string');
-    }
-
-    if (typeof hashedPassword !== 'string' || hashedPassword.length === 0) {
-      throw new Error('Hashed password must be a non-empty string');
-    }
-
     return await bcrypt.compare(password, hashedPassword);
-  } catch (err) {
-    logger.error('Error comparing password:', err);
-    throw new Error('Failed to compare password');
+  } catch (e) {
+    logger.error(`Error comparing password: ${e}`);
+    throw new Error('Error comparing password');
   }
 };
 
-export const createUser = async ({ name, email, password, role }) => {
+export const createUser = async ({ name, email, password, role = 'user' }) => {
   try {
-    // Check user already exists
     const existingUser = await db
       .select()
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
-    if (existingUser.length > 0) {
-      throw new Error('User already exists');
-    }
 
-    // Hash the password
-    const hashedPassword = await bcrypt.hash(password, 10);
+    if (existingUser.length > 0)
+      throw new Error('User with this email already exists');
 
-    // Insert new user
+    const password_hash = await hashPassword(password);
+
     const [newUser] = await db
       .insert(users)
-      .values({ name, email, password: hashedPassword, role })
+      .values({ name, email, password: password_hash, role })
       .returning({
         id: users.id,
         name: users.name,
@@ -62,45 +46,45 @@ export const createUser = async ({ name, email, password, role }) => {
         created_at: users.created_at,
       });
 
-    logger.info(`User ${newUser.email} successfully created!`);
+    logger.info(`User ${newUser.email} created successfully`);
     return newUser;
-  } catch (err) {
-    logger.error('Error creating user:', err);
-    throw new Error('Error creating user');
+  } catch (e) {
+    logger.error(`Error creating the user: ${e}`);
+    throw e;
   }
 };
 
 export const authenticateUser = async ({ email, password }) => {
   try {
-    // Find user by email
-    const [user] = await db
+    const [existingUser] = await db
       .select()
       .from(users)
       .where(eq(users.email, email))
       .limit(1);
 
-    if (!user) {
+    if (!existingUser) {
       throw new Error('User not found');
     }
 
-    // Validate password
-    const isPasswordValid = await comparePassword(password, user.password);
+    const isPasswordValid = await comparePassword(
+      password,
+      existingUser.password
+    );
 
     if (!isPasswordValid) {
       throw new Error('Invalid password');
     }
 
-    // Return user without password
-    logger.info(`User ${user.email} authenticated successfully`);
+    logger.info(`User ${existingUser.email} authenticated successfully`);
     return {
-      id: user.id,
-      name: user.name,
-      email: user.email,
-      role: user.role,
-      created_at: user.created_at,
+      id: existingUser.id,
+      name: existingUser.name,
+      email: existingUser.email,
+      role: existingUser.role,
+      created_at: existingUser.created_at,
     };
-  } catch (err) {
-    logger.error('Error authenticating user:', err);
-    throw err;
+  } catch (e) {
+    logger.error(`Error authenticating user: ${e}`);
+    throw e;
   }
 };

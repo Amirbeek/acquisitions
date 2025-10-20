@@ -1,5 +1,5 @@
-# Dependencies
-node_modules/
+# Node.js
+node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -11,53 +11,36 @@ yarn-error.log*
 .env.production
 .env.test
 
-# Git
-.git/
-.gitignore
-
-# Docker files
-Dockerfile*
-docker-compose*.yml
-.dockerignore
-
-# Documentation
-README.md
-CHANGELOG.md
-docs/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# OS
-.DS_Store
-Thumbs.db
-
 # Logs
-logs/
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Runtime data
-pids/
+pids
 *.pid
 *.seed
 *.pid.lock
 
 # Coverage directory used by tools like istanbul
-coverage/
-.nyc_output/
+coverage
+*.lcov
 
-# ESLint cache
-.eslintcache
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
 
 # Optional npm cache directory
 .npm
 
-# Optional REPL history
-.node_repl_history
+# Optional eslint cache
+.eslintcache
 
 # Output of 'npm pack'
 *.tgz
@@ -65,14 +48,79 @@ coverage/
 # Yarn Integrity file
 .yarn-integrity
 
-# Build outputs (if any)
+# dotenv environment variables file
+.env
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# Documentation
+README.md
+docs/
+*.md
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Neon Local data
+.neon_local/
+
+# Build artifacts
 dist/
 build/
 
-# Drizzle artifacts (migrations should be included, but ORM artifacts excluded)
-.drizzle/
-
-# Test files (optional - include if you want tests in production image)
-__tests__/
-*.test.js
-*.spec.js
+# Temporary files
+tmp/
+temp/
