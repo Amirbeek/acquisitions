@@ -1,0 +1,30 @@
+{"level":"info","message":"Hello","service":"acquisitions-api","timestamp":"2025-10-18T09:21:35.363Z"}
+{"level":"info","message":"::1 - - [18/Oct/2025:09:21:35 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\"\n","service":"acquisitions-api","timestamp":"2025-10-18T09:21:35.370Z"}
+{"level":"info","message":"Hello","service":"acquisitions-api","timestamp":"2025-10-19T06:47:01.912Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:47:01 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:47:01.921Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:47:07 +0000] \"GET /healthz HTTP/1.1\" 404 146 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:47:07.554Z"}
+{"level":"info","message":"Hello","service":"acquisitions-api","timestamp":"2025-10-19T06:49:07.364Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:49:07 +0000] \"GET / HTTP/1.1\" 200 22 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:49:07.371Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:49:39 +0000] \"GET /pai HTTP/1.1\" 404 142 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:49:39.876Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:49:42 +0000] \"GET /api HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:49:42.112Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:49:50 +0000] \"GET /health HTTP/1.1\" 404 145 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:49:50.464Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:06:50:09 +0000] \"GET /health HTTP/1.1\" 200 2 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T06:50:09.437Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:20:21 +0000] \"GET /sign-up HTTP/1.1\" 404 146 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:20:21.120Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:20:29 +0000] \"GET /api/auth/sign-up HTTP/1.1\" 404 155 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:20:29.924Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:21:00 +0000] \"GET /api/auth/sign-up HTTP/1.1\" 404 155 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:21:00.583Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:23:13 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 31 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:23:13.555Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:23:48 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 93 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:23:48.127Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:25:17 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 250 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:25:17.904Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:26:01 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 146 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:26:01.177Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:26:35 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 94 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:26:35.622Z"}
+{"level":"info","message":"Sign up successfully: contact@jsmaster.com","service":"acquisitions-api","timestamp":"2025-10-19T07:27:05.956Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:07:27:05 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 132 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T07:27:05.962Z"}
+{"level":"info","message":"User contact@jsmaster.com successfully created!","service":"acquisitions-api","timestamp":"2025-10-19T08:00:19.806Z"}
+{"level":"info","message":"Sign up successfully: contact@jsmaster.com","service":"acquisitions-api","timestamp":"2025-10-19T08:00:19.812Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:08:00:19 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 112 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T08:00:19.815Z"}
+{"level":"info","message":"User contact2@jsmaster.com successfully created!","service":"acquisitions-api","timestamp":"2025-10-19T08:00:28.612Z"}
+{"level":"info","message":"Sign up successfully: contact2@jsmaster.com","service":"acquisitions-api","timestamp":"2025-10-19T08:00:28.616Z"}
+{"level":"info","message":"::1 - - [19/Oct/2025:08:00:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 113 \"-\" \"PostmanRuntime/7.46.1\"\n","service":"acquisitions-api","timestamp":"2025-10-19T08:00:28.617Z"}
+{"level":"info","message":"User contact3@jsmaster.com successfully created!","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.290Z"}
+{"level":"info","message":"Sign up successfully: contact3@jsmaster.com","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.296Z"}
+{"level":"info","message":"::1 - - [20/Oct/2025:15:46:53 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 113 \"-\" \"PostmanRuntime/7.49.0\"\n","service":"acquisitions-api","timestamp":"2025-10-20T15:46:53.300Z"}
